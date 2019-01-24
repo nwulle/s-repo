@@ -1,0 +1,6 @@
+cor(final_master2$`Prix moyen m2 achat 2018`,final_master2$burgpop2018,use="complete.obs")
+burg_prix_pop<-lm(Burglaries~`Prix moyen m2 achat 2018`+`Population 2018`, data=final_master2)
+summary(burg_prix_pop)
+vif(burg_prix_pop)
+bptest(burg_prix_pop)
+coeftest(burg_prix_pop)
