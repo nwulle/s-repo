@@ -13,11 +13,11 @@ housing_prices <- read_excel("data/housing prices.xlsx")
 
 #import burglaries and population for all of France
 library(readr)
-burglaries_france2018 <- read_csv("~/Downloads/burglaries2018.csv")
+burglaries_france2018 <- read_csv("~/data/burglaries2018.csv")
 burglaries_france2018$X3 <- NULL
 colnames(burglaries_france2018)[colnames(burglaries_france2018)=="221747"] <- "Burglaries"
 colnames(burglaries_france2018)[colnames(burglaries_france2018)=="France"] <- "Insee"
-population2018 <- read_delim("~/Downloads/population2018.csv", 
+population2018 <- read_delim("~/data/population2018.csv", 
                              ";", escape_double = FALSE, trim_ws = TRUE)
 
 #import Khartis basemap template
